@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test Parallax</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gundam Cockpit HUD with Parallax</title>
     <link rel="stylesheet" href="main.css">
-    <script src="script.js"></script>
 </head>
-
 <body>
     <div class="parallax">
+        <!-- Stars Layers -->
         <div class="stars star1"></div>
         <div class="stars star2"></div>
+
+        <!-- Cockpit Image -->
         <div class="cockpit">
             <img src="images/Cockpit.png" alt="Cockpit">
         </div>
-    </div>
-</body>
 
+        <!-- Floating Navigation Bar (HUD Main Monitor) -->
+        <nav class="hud-nav">
+            <div class="hud-box">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Lore</a></li>
+                    <li><a href="#">Pilots</a></li>
+                    <li><a href="#">Mobile Suits</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Factions</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
 </html>

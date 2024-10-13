@@ -1,4 +1,4 @@
-// JavaScript for moving stars and cockpit based on both X and Y mouse movements
+// JavaScript for moving stars and cockpit based on mouse movements
 window.addEventListener('mousemove', function(e) {
   let width = window.innerWidth;
   let height = window.innerHeight;
@@ -8,10 +8,10 @@ window.addEventListener('mousemove', function(e) {
   let mouseY = e.clientY / height;
 
   // Calculate parallax movement for stars
-  let moveXStar1 = (mouseX - 0.5) * 100;  // 50 is the intensity factor for star1
+  let moveXStar1 = (mouseX - 0.5) * 100;
   let moveYStar1 = (mouseY - 0.5) * 100;
 
-  let moveXStar2 = (mouseX - 0.5) * 200;  // 100 is the intensity factor for star2
+  let moveXStar2 = (mouseX - 0.5) * 200;
   let moveYStar2 = (mouseY - 0.5) * 200;
 
   // Apply the new positions to the stars using pixel values
