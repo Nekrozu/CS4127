@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gundam Cockpit HUD with Parallax</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css"> 
 </head>
 <body>
     <div class="parallax">
@@ -14,11 +14,11 @@
 
         <!-- Cockpit Image -->
         <div class="cockpit">
-            <img src="images/Cockpit.png" alt="Cockpit">
+            <img src="images/Cockpit.png" alt="Cockpit"> 
         </div>
 
         <!-- Floating Navigation Bar (HUD Main Monitor) -->
-        <nav class="hud-nav">
+        <nav class="hud-nav" id="hudNav">
             <div class="hud-box">
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -30,8 +30,13 @@
                 </ul>
             </div>
         </nav>
+
+        <!-- Boot-Up Screen -->
+        <div class="hud-boot" id="hudBoot">
+            <span id="bootText"></span>
+        </div>
     </div>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

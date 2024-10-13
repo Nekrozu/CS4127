@@ -25,3 +25,33 @@ window.addEventListener('mousemove', function(e) {
   // Apply the cockpit movement
   document.querySelector('.cockpit img').style.transform = `translate(${moveXCockpit}px, ${moveYCockpit}px)`;
 });
+
+// Function to type out text letter by letter
+function typeOutText(text, element, speed = 100, callback) {
+  let index = 0;
+  function type() {
+      if (index < text.length) {
+          element.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, speed); // Adjust speed for faster or slower typing
+      } else if (callback) {
+          callback(); // Call the callback once the text is fully typed out
+      }
+  }
+  type();
+}
+
+// Boot-up sequence
+window.onload = function () {
+  const bootTextElement = document.getElementById('bootText');
+  const bootText = "System Initializing...\nRunning Diagnostics...\n\nAll Systems Operational.\nWelcome, Pilot.";
+  
+  // Start typing effect
+  typeOutText(bootText, bootTextElement, 100, function() {
+      // Show the nav only after the boot text finishes typing
+      setTimeout(() => {
+          document.getElementById('hudNav').style.visibility = 'visible'; // Show nav after typing
+          document.getElementById('hudBoot').remove(); // Remove the boot-up screen
+      }, 1000); // Give a little delay before showing the nav
+  });
+};

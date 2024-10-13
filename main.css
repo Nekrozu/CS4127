@@ -30,11 +30,11 @@ body, html {
 }
 
 .star1 {
-  background-image: url('images/star_1.png');
+  background-image: url('images/star_1.png'); 
 }
 
 .star2 {
-  background-image: url('images/star_2.png');
+  background-image: url('images/star_2.png'); 
 }
 
 /* Cockpit styling */
@@ -64,6 +64,7 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden; /* Hidden until boot-up finishes */
 }
 
 .hud-box {
@@ -102,4 +103,29 @@ body, html {
 
 .hud-nav ul li a:hover {
   color: cyan; /* HUD-like color for hover */
+}
+
+/* Boot-up Text Style */
+.hud-boot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #00ffff;  /* Same color as nav text */
+  font-size: 2rem; /* Match nav size */
+  text-align: center;
+  white-space: pre-line; /* Allows multiline text */
+  z-index: 20;
+}
+
+.hud-boot span {
+  border-right: 2px solid #00ffff; /* Blinking cursor */
+  display: inline-block;
+  animation: blink 0.7s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to {
+      border-color: transparent;
+  }
 }
