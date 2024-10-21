@@ -119,7 +119,7 @@ body, html {
 }
 
 .hud-boot span {
-  border-right: 2px solid #00ffff; /* Blinking cursor */
+  border-right: 2px solid #00ffff;
   display: inline-block;
   animation: blink 0.7s steps(2, start) infinite;
 }

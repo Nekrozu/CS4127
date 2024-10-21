@@ -52,6 +52,6 @@ window.onload = function () {
       setTimeout(() => {
           document.getElementById('hudNav').style.visibility = 'visible'; // Show nav after typing
           document.getElementById('hudBoot').remove(); // Remove the boot-up screen
-      }, 1000); // Give a little delay before showing the nav
+      }, 1000);
   });
 };
