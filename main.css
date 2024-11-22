@@ -197,8 +197,8 @@ body, html {
   border: 2px solid rgba(0, 255, 255, 0.6);
   padding: 20px;
   border-radius: 15px;
-  width: 30%; /* Reduced width */
-  height: 80%;
+  width: 30%;
+  height: 70%;
   margin: 0 auto;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
@@ -208,19 +208,22 @@ body, html {
 .news-column {
   position: absolute;
   top: 50%; /* Center vertically */
-  right: 7%; /* Slightly shifted to the left */
+  right: -10%; /* Slightly shifted to the left */
   transform: translate(0, -50%);
 }
 
 .news-box {
   background-color: rgba(0, 255, 255, 0.2);
   border: 2px solid rgba(0, 255, 255, 0.6);
-  padding: 20px;
   border-radius: 15px;
-  width: 80%; /* Ensures the box is not too wide */
+  width: 65%;
+  height: 600px;
+  padding: 20px;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  overflow: hidden; /* Hide any overflowing content */
 }
+
 
 /* Mobile-friendly adjustments */
 @media (max-width: 768px) {

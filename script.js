@@ -46,3 +46,18 @@ window.onload = function () {
       }, 1000);
   });
 };
+
+const facts = [
+  "Did you know? The Gundam franchise started in 1979!",
+  "The first Gundam series was Mobile Suit Gundam (1979).",
+  "Gundam models, or Gunpla, are one of the most popular model kits in the world!",
+  "The Gundam franchise spans across TV series, movies, manga, and games.",
+  "Mobile Suit Gundam inspired multiple generations of fans worldwide!"
+];
+
+function getRandomFact() {
+  const randomIndex = Math.floor(Math.random() * facts.length);
+  return facts[randomIndex];
+}
+
+document.getElementById("randomFact").textContent = getRandomFact();
