@@ -23,13 +23,13 @@ window.addEventListener('mousemove', function (e) {
 function typeOutText(text, element, speed = 100, callback) {
   let index = 0;
   function type() {
-    if (index < text.length) {
-      element.innerHTML += text.charAt(index);
-      index++;
-      setTimeout(type, speed);
-    } else if (callback) {
-      callback();
-    }
+      if (index < text.length) {
+          element.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(type, speed);
+      } else if (callback) {
+          callback();
+      }
   }
   type();
 }
@@ -38,11 +38,11 @@ window.onload = function () {
   const bootTextElement = document.getElementById('bootText');
   const bootText = "System Initializing...\nRunning Diagnostics...\n\nAll Systems Operational.\nWelcome, Pilot.";
 
-
   typeOutText(bootText, bootTextElement, 100, function () {
-    setTimeout(() => {
-      document.getElementById('hudNav').style.visibility = 'visible';
-      document.getElementById('hudBoot').remove();
-    }, 1000);
+      setTimeout(() => {
+          // Reveal the main layout and remove the boot-up animation
+          document.getElementById('mainLayout').classList.remove('hidden');
+          document.getElementById('hudBoot').remove();
+      }, 1000);
   });
 };

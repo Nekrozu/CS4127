@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gundam Cockpit HUD with Parallax</title>
+    <title>Gundam Cockpit HUD - Main</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
@@ -14,26 +14,50 @@
         <div class="stars star2"></div>
 
         <!-- Cockpit Image -->
-        <!-- Please use HTML5 Semantics. You can view from here https://www.w3schools.com/html/html5_semantic_elements.asp (Ms Afiqah)--->
         <div class="cockpit">
             <img src="images/Cockpit.png" alt="Cockpit">
         </div>
 
-        <nav class="hud-nav" id="hudNav">
-            <div class="hud-box">
-                <ul>
-                    <li><a href="lore.html">Lore</a></li>
-                    <li><a href="pilot.html">Pilots</a></li>
-                    <li><a href="ms.html">Mobile Suits</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="faction.html">Factions</a></li>
-                </ul>
-            </div>
-        </nav>
-
         <!-- Boot-Up Screen -->
-        <div class="hud-boot" id="hudBoot">
-            <span id="bootText"></span>
+        <div class="hud-boot-box" id="hudBoot">
+            <div class="hud-boot-content">
+                <span id="bootText"></span>
+            </div>
+        </div>
+
+        <!-- Main Page Layout -->
+        <div class="main-layout hidden" id="mainLayout">
+            <!-- Left Menu -->
+            <nav class="hud-nav">
+                <div class="hud-box">
+                    <ul>
+                        <li><a href="lore.html">Lore</a></li>
+                        <li><a href="pilot.html">Pilots</a></li>
+                        <li><a href="ms.html">Mobile Suits</a></li>
+                        <li><a href="faction.html">Factions</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Center Content -->
+            <section class="main-content">
+                <div class="content-box">
+                    <h1>Welcome to the Gundam Database</h1>
+                    <p>Explore the rich lore, iconic pilots, and legendary mobile suits from the Gundam Universe.</p>
+                </div>
+            </section>
+
+            <!-- Right News -->
+            <aside class="news-column">
+                <div class="news-box">
+                    <h2>Latest News</h2>
+                    <ul>
+                        <li>Universal Century Timeline Updated</li>
+                        <li>New Gundam Model Announced</li>
+                        <li>Ad Stella Series Continues</li>
+                    </ul>
+                </div>
+            </aside>
         </div>
     </div>
 
@@ -41,7 +65,7 @@
 </body>
 
 <footer>
-    <p> Placeholder </p>
+    <p>Placeholder</p>
 </footer>
 
 </html>
