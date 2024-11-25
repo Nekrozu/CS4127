@@ -1,40 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gundam Factions</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Factions - Gundam Universe</title>
+    <link rel="stylesheet" href="faction.css">
 </head>
+
 <body>
     <div class="parallax">
         <div class="stars star1"></div>
         <div class="stars star2"></div>
 
         <!-- Cockpit Image -->
-        <div class="cockpit">
+        <header class="cockpit">
             <img src="images/Cockpit.png" alt="Cockpit">
-        </div>
+        </header>
 
-        <nav class="hud-nav">
-            <div class="hud-box">
+        <!-- Main Layout -->
+        <main class="main-layout">
+            <!-- Left Column: Faction Menu -->
+            <nav class="hud-nav" aria-label="Faction Navigation">
+                <a href="index.html" class="back-btn" aria-label="Back to Home">Return</a>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="lore.html">Lore</a></li>
-                    <li><a href="pilot.html">Pilots</a></li>
-                    <li><a href="ms.html">Mobile Suits</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="faction.html">Factions</a></li>
+                    <li><button class="faction-btn" data-faction="earth-federation">Earth Federation</button></li>
+                    <li><button class="faction-btn" data-faction="zeon">Principality of Zeon</button></li>
+                    <li><button class="faction-btn" data-faction="aeug">Anti-Earth Union Group</button></li>
+                    <li><button class="faction-btn" data-faction="titans">Titans</button></li>
+                    <li><button class="faction-btn" data-faction="neo-zeon">Neo Zeon</button></li>
+                    <li><button class="faction-btn" data-faction="crossbone-vanguard">Crossbone Vanguard</button></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
 
-        <main class="content">
-            <h1>Gundam Factions</h1>
-            <p>Dive into the different factions that vie for power and influence within the Gundam world.</p>
+            <!-- Center Column: Faction Description -->
+            <section class="faction-description">
+                <div class="des-box">
+                    <h1>Factions in the Gundam Universe</h1>
+                    <article class="faction-content">
+                        <h2>Select a faction to learn more</h2>
+                        <p>Explore the history, beliefs, and iconic figures behind each faction, uncovering their motivations, struggles, and the pivotal events that shaped their destinies in the Gundam universe. We'll begin by delving into the factions from the Universal Century, the cornerstone of the Gundam franchise. Additional timelines and their factions will be added at a later date, so stay tuned for updates!</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Column: Faction Images -->
+            <aside class="faction-visuals">
+                <div class="vis-box">
+                    <h2>Faction Emblems</h2>
+                    <div class="emblem-container">
+                    </div>
+                </div>
+            </aside>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="faction.js"></script>
 </body>
+
 </html>

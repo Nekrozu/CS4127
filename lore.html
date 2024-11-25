@@ -1,163 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gundam Lore</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Lore - Gundam Universe</title>
+    <link rel="stylesheet" href="lore.css">
 </head>
+
 <body>
-    <!--Parallax-->
+    <!-- Parallax Background Section -->
     <div class="parallax">
-        <!-- Star Layers -->
+        <!-- Star Background Layers -->
         <div class="stars star1"></div>
         <div class="stars star2"></div>
 
         <!-- Cockpit Image -->
-        <div class="cockpit">
+        <header class="cockpit">
             <img src="images/Cockpit.png" alt="Cockpit">
-        </div>
-    <!--End Parallax-->
-    
-    <div class="js-timeline ag-timeline"></div>
-    <!--Timeline Progress-->
-        <div class="js-timeline_line ag-timeline_line">
-            <div class="js-timeline_line-progress ag-timeline_line-progress"></div>
-        </div>
+        </header>
 
-        <div class="ag-timeline_list">
-            
-            <!--Moon Landing Left Box-->
-            <div class="js-timeline_item ag-timeline_item">
-                <div class="ag-timeline-card_box">
-                    <!-- Number Code-->
-                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                        <div class="ag-timeline-card_point">1969</div>
-                    </div>
+        <!-- Main Layout -->
+        <main class="main-layout">
+            <!-- Left Column: Timeline Menu -->
+            <nav class="hud-nav" aria-label="Timeline Navigation">
+                <a href="index.html" class="back-btn" aria-label="Back to Home">←</a>
+                <ul>
+                    <li><button class="timeline-btn" data-timeline="universal-century">Universal Century</button></li>
+                    <li><button class="timeline-btn" data-timeline="future-century">Future Century</button></li>
+                    <li><button class="timeline-btn" data-timeline="after-colony">After Colony</button></li>
+                    <li><button class="timeline-btn" data-timeline="cosmic-era">Cosmic Era</button></li>
+                    <li><button class="timeline-btn" data-timeline="anno-domini">Anno Domini</button></li>
+                    <li><button class="timeline-btn" data-timeline="post-disaster">Post Disaster</button></li>
+                    <li><button class="timeline-btn" data-timeline="ad-stella">Ad Stella</button></li>
+                </ul>
+            </nav>
 
-                    <!--Name Code-->
-                    <div class="ag-timeline-card_meta-box">
-                        <div class="ag-timeline-card_meta">Moon landing</div>
-                    </div>
+            <!-- Middle Column: Explanation -->
+            <section class="lore-description">
+                <div class="content-box">
+                <header>
+                    <h1>Lore of the Gundam Universe</h1>
+                    <br>
+                </header>
+                <article>
+                    <img class="uc_map" src="images/UC_Map.png" alt="Universal Century Earth Map">
+                    <br>
+                    <p>Explore the history, beliefs, and iconic figures behind each faction, uncovering their motivations, struggles, and the pivotal events that shaped their destinies in the Gundam universe. We'll begin by delving into the factions from the Universal Century, the cornerstone of the Gundam franchise. Additional timelines and their factions will be added at a later date, so stay tuned for updates!
+                    </p>
+                </article>
+            </div>
+            </section>
+
+            <!-- Right Column: Gundam Series -->
+            <aside class="watch-series">
+                <div class="watch-box">
+                <header>
+                    <h2>Watch Guide</h2>
+                </header>
+                <br>
+                <p>Here is how you can start watching Gundam:</p>
+                <br>
+                <blockquote class="reddit-embed-bq" style="height:316px" data-embed-locale="en-EN" data-embed-theme="dark" data-embed-height="316"><a href="https://www.reddit.com/r/MobileSuitGundam/comments/rlthj1/how_do_i_start_the_series/">How do I start the series?</a><br> by<a href="https://www.reddit.com/user/_nightsnotover/">u/_nightsnotover</a> in<a href="https://www.reddit.com/r/MobileSuitGundam/">MobileSuitGundam</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
+                <br>
+                <hr>
+                <br>
+                <p>Youtube Playlist (Not Every Series Is On Youtube)</p>
+                <br>
+                <ul>
+                    <li><a href="https://www.youtube.com/@GundamInfo/playlists" target="_blank" rel="noopener noreferrer">Anime Playlist</a></li>
+                </ul>
                 </div>
+            </aside>
+        </main>
 
-                <!--Image Code-->
-                <div class="ag-timeline-card_item">
-                    <div class="ag-timeline-card_inner">
-                        <div class="ag-timeline-card_img-box">
-                            <img src="" class="ag-timeline-card_img" />
+        <!-- Timeline Popup Modal -->
+        <section id="timeline-modal" class="timeline-modal" aria-hidden="true" role="dialog" aria-label="Timeline Details">
+            <div class="modal-content">
+                <button class="close-btn" aria-label="Close Timeline Modal">&times;</button>
+                <div class="timeline-container">
+                    <!-- Timeline Structure -->
+                    <div class="timeline">
+                        <div class="timeline-progress"></div>
+        
+                        <!-- Timeline Events -->
+                        <div class="timeline-event" data-year="0079">
+                            <div class="event-dot"></div>
+                            <div class="event-popup">
+                                <h2>Universal Century 0079</h2>
+                                <p>The One Year War begins, marking a pivotal moment in the Universal Century timeline.</p>
+                            </div>
+                        </div>
+        
+                        <div class="timeline-event" data-year="0087">
+                            <div class="event-dot"></div>
+                            <div class="event-popup">
+                                <h2>Universal Century 0087</h2>
+                                <p>The Gryps Conflict and the rise of Titans against AEUG.</p>
+                            </div>
+                        </div>
+        
+                        <div class="timeline-event" data-year="0153">
+                            <div class="event-dot"></div>
+                            <div class="event-popup">
+                                <h2>Universal Century 0153</h2>
+                                <p>The events of Victory Gundam unfold, marking a significant turning point.</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="ag-timeline-card_arrow"></div>
                 </div>
             </div>
-
-            <!-- WW3 Right Box-->
-            <div class="js-timeline_item ag-timeline_item">
-                <div class="ag-timeline-card_box">
-                    <!-- Number Code-->
-                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                        <div class="ag-timeline-card_point">1990</div>
-                    </div>
-
-                    <!--Name Code-->
-                    <div class="ag-timeline-card_meta-box">
-                        <div class="ag-timeline-card_meta">World War III</div>
-                    </div>
-                </div>
-
-                <!--Image Code-->
-                <div class="ag-timeline-card_item">
-                    <div class="ag-timeline-card_inner">
-                        <div class="ag-timeline-card_img-box">
-                            <img src="" class="ag-timeline-card_img" />
-                        </div>
-                    </div>
-                    <div class="ag-timeline-card_arrow"></div>
-                </div>
-            </div>
-
-            <!-- Nuclear Left Box-->
-            <div class="js-timeline_item ag-timeline_item">
-                <div class="ag-timeline-card_box">
-                    <!-- Number Code-->
-                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                        <div class="ag-timeline-card_point">1993</div>
-                    </div>
-
-                    <!--Name Code-->
-                    <div class="ag-timeline-card_meta-box">
-                        <div class="ag-timeline-card_meta">Nuclear Exchange</div>
-                    </div>
-                </div>
-
-                <!--Image Code-->
-                <div class="ag-timeline-card_item">
-                    <div class="ag-timeline-card_inner">
-                        <div class="ag-timeline-card_img-box">
-                            <img src="" class="ag-timeline-card_img" />
-                        </div>
-                    </div>
-                    <div class="ag-timeline-card_arrow"></div>
-                </div>
-            </div>
-
-            <!-- Earth Federation Right Box-->
-            <div class="js-timeline_item ag-timeline_item">
-                <div class="ag-timeline-card_box">
-                    <!-- Number Code-->
-                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                        <div class="ag-timeline-card_point">1999</div>
-                    </div>
-
-                    <!--Name Code-->
-                    <div class="ag-timeline-card_meta-box">
-                        <div class="ag-timeline-card_meta">Earth Federation</div>
-                    </div>
-                </div>
-
-                <!--Image Code-->
-                <div class="ag-timeline-card_item">
-                    <div class="ag-timeline-card_inner">
-                        <div class="ag-timeline-card_img-box">
-                            <img src="" class="ag-timeline-card_img" />
-                        </div>
-                    </div>
-                    <div class="ag-timeline-card_arrow"></div>
-                </div>
-            </div>
-
-            <!-- Satellite Right Box-->
-            <div class="js-timeline_item ag-timeline_item">
-                <div class="ag-timeline-card_box">
-                    <!-- Number Code-->
-                    <div class="js-timeline-card_point-box ag-timeline-card_point-box">
-                        <div class="ag-timeline-card_point">2005</div>
-                    </div>
-
-                    <!--Name Code-->
-                    <div class="ag-timeline-card_meta-box">
-                        <div class="ag-timeline-card_meta">Solar Powered Satellite</div>
-                    </div>
-                </div>
-
-                <!--Image Code-->
-                <div class="ag-timeline-card_item">
-                    <div class="ag-timeline-card_inner">
-                        <div class="ag-timeline-card_img-box">
-                            <img src="" class="ag-timeline-card_img" />
-                        </div>
-                    </div>
-                    <div class="ag-timeline-card_arrow"></div>
-                </div>
-            </div>
-
-        </div>
+        </section>
     </div>
-    <!--End Timeline Progress-->
 
-
-    <script src="script.js"></script>
-    <script src='https://cloudflare.com/ajax/libs/jquery.min.js'></script>
+    <script src="lore.js"></script>
 </body>
+
 </html>

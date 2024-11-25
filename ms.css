@@ -1,0 +1,174 @@
+/* General Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* Parallax Background */
+.parallax {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.star1 {
+  background-image: url('images/star_1.png');
+}
+
+.star2 {
+  background-image: url('images/star_2.png');
+}
+
+/* Cockpit Styling */
+.cockpit {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cockpit img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.1s ease-out;
+}
+
+/* Layout for Main Page */
+.main-layout {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  padding: 20px;
+}
+
+/* Up to this point, everything should be the same with all the css
+
+/* Left Column: Navigation List */
+.hud-nav {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 10%; /* Slightly shifted to the right */
+  transform: translate(0, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.hud-nav button{
+  border: none;
+  background: none;
+  color: white;
+  }
+
+.hud-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hud-nav ul li {
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.6);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.hud-nav ul li button:hover {
+  background-color: rgba(0, 255, 255, 0.4);
+}
+
+/* Middle Column: Pilot Details */
+.mobile-suit-description .des-box {
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  width: 30%;
+  height: 70%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  color: white;
+}
+
+.mobile-suit-description{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-suit-description h1 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.mobile-suit-description p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Right Column: Pilot Visuals */
+.mobile-suit-visuals {
+  flex: 1;
+  padding-left: 20px;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 120px; /* Slightly shifted to the left */
+  transform: translate(0, -50%);
+}
+
+.vis-box{
+  color: white;
+  background-color: rgba(0, 255, 255, 0.2); /* Darker background for better contrast */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Consistent border color */
+  border-radius: 15px;
+  width: 65%;
+  height: 600px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.mobile-suit-visuals img {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glowing effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mobile-suit-visuals img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+}

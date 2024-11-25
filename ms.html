@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Suits</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Mobile Suits - Gundam Universe</title>
+    <link rel="stylesheet" href="ms.css">
 </head>
+
 <body>
     <div class="parallax">
         <div class="stars star1"></div>
         <div class="stars star2"></div>
 
         <!-- Cockpit Image -->
-        <div class="cockpit">
+        <header class="cockpit">
             <img src="images/Cockpit.png" alt="Cockpit">
-        </div>
+        </header>
 
-        <nav class="hud-nav">
-            <div class="hud-box">
+        <!-- Main Layout -->
+        <main class="main-layout">
+            <!-- Left Column: Mobile Suit Menu -->
+            <nav class="hud-nav" aria-label="Mobile Suit Navigation">
+                <a href="index.html" class="back-btn" aria-label="Back to Home">Return</a>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="lore.html">Lore</a></li>
-                    <li><a href="pilot.html">Pilots</a></li>
-                    <li><a href="ms.html">Mobile Suits</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="faction.html">Factions</a></li>
+                    <li><button class="mobile-suit-btn" data-suit="rx-78-2-gundam">RX-78-2 Gundam</button></li>
+                    <li><button class="mobile-suit-btn" data-suit="zaku-ii">Zaku II</button></li>
+                    <li><button class="mobile-suit-btn" data-suit="wing-zero">Wing Gundam Zero</button></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
 
-        <main class="content">
-            <h1>Mobile Suits</h1>
-            <p>Explore the various mobile suits that have become iconic within the Gundam universe, each with unique capabilities.</p>
+            <!-- Center Column: Mobile Suit Description -->
+            <section class="mobile-suit-description">
+                <div class="des-box">
+                    <h1>Mobile Suits in the Gundam Universe</h1>
+                    <article class="mobile-suit-content">
+                        <h2>Select a Mobile Suit to learn more</h2>
+                        <p>Dive into the details of iconic Mobile Suits from the Gundam universe. Learn about their specifications, unique features, and the pivotal roles they played in the stories. From the Universal Century to alternate timelines, each suit holds a significant legacy.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Column: Mobile Suit Visuals -->
+            <aside class="mobile-suit-visuals">
+                <div class="vis-box">
+                    <h2>Mobile Suit Designs</h2>
+                    <div class="suit-image-container">
+                    </div>
+                </div>
+            </aside>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="ms.js"></script>
 </body>
+
 </html>

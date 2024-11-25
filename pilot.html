@@ -1,40 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gundam Pilots</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Pilots - Gundam Universe</title>
+    <link rel="stylesheet" href="pilot.css">
 </head>
+
 <body>
     <div class="parallax">
         <div class="stars star1"></div>
         <div class="stars star2"></div>
 
         <!-- Cockpit Image -->
-        <div class="cockpit">
+        <header class="cockpit">
             <img src="images/Cockpit.png" alt="Cockpit">
-        </div>
+        </header>
 
-        <nav class="hud-nav">
-            <div class="hud-box">
+        <!-- Main Layout -->
+        <main class="main-layout">
+            <!-- Left Column: Pilot Navigation -->
+            <nav class="pilot-nav" aria-label="Pilot Navigation">
+                <a href="index.html" class="back-btn" aria-label="Back to Home">Return</a>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="lore.html">Lore</a></li>
-                    <li><a href="pilot.html">Pilots</a></li>
-                    <li><a href="ms.html">Mobile Suits</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="faction.html">Factions</a></li>
+                    <li><button class="pilot-btn" data-pilot="amuro-ray">Amuro Ray</button></li>
+                    <li><button class="pilot-btn" data-pilot="char-aznable">Char Aznable</button></li>
+                    <li><button class="pilot-btn" data-pilot="kamille-bidan">Kamille Bidan</button></li>
+                    <li><button class="pilot-btn" data-pilot="judau-ashta">Judau Ashta</button></li>
+                    <li><button class="pilot-btn" data-pilot="heero-yuy">Heero Yuy</button></li>
+                    <li><button class="pilot-btn" data-pilot="setsuna-f-seiei">Setsuna F. Seiei</button></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
 
-        <main class="content">
-            <h1>Gundam Pilots</h1>
-            <p>Learn about the renowned pilots who have shaped the Gundam universe with their unique skills and backgrounds.</p>
+            <!-- Center Column: Pilot Description -->
+            <section class="pilot-details">
+                <div class="pilot-box">
+                    <h1>Pilots in the Gundam Universe</h1>
+                    <article class="pilot-content">
+                        <h2>Select a pilot to learn more</h2>
+                        <p>Uncover the stories of legendary Gundam pilots, their struggles, and their contributions to the wars they fought in. From Amuro Ray to Setsuna F. Seiei, learn what makes each pilot a critical piece of the Gundam saga. Click on a pilot from the navigation to view detailed bios, their Mobile Suits, and key battles.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Right Column: Pilot Visuals -->
+            <aside class="pilot-visuals">
+                <div class="vis-box">
+                    <h2>Pilot Images</h2>
+                    <div class="image-container">
+                        <img src="images/pilot.png" alt="Default Pilot Image" class="default-image">
+                    </div>
+                </div>
+            </aside>
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script src="pilot.js"></script>
 </body>
+
 </html>

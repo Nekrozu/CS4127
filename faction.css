@@ -1,0 +1,188 @@
+/* General Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  /* Parallax Background */
+  .parallax {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  .star1 {
+    background-image: url('images/star_1.png');
+  }
+  
+  .star2 {
+    background-image: url('images/star_2.png');
+  }
+  
+  /* Cockpit Styling */
+  .cockpit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cockpit img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Layout for Main Page */
+  .main-layout {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    padding: 20px;
+  }
+  
+  /* Up to this point, everything should be the same with all the css
+
+
+
+/* Left Column: Faction Menu */
+.hud-nav {
+    flex: 1;
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 10%; /* Slightly shifted to the right */
+    transform: translate(0, -50%);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hud-nav button{
+  border: none;
+  background: none;
+  color: white;
+  }
+
+.hud-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.hud-nav ul li{
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.6);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.hud-nav ul li button:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+/* Center Column: Description */
+.faction-description .des-box {
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  width: 30%;
+  height: 70%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  color: white;
+}
+
+.faction-description {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faction-description h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.faction-content h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.faction-content p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Right Column: Faction Images */
+.faction-visuals {
+  flex: 1;
+  padding-left: 20px;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 80px; /* Slightly shifted to the left */
+  transform: translate(0, -50%);
+}
+
+.vis-box {
+  color: white;
+  background-color: rgba(0, 255, 255, 0.2); /* Darker background for better contrast */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Consistent border color */
+  border-radius: 15px;
+  width: 550px;
+  height: 600px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.faction-visuals h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.emblem-container {
+    gap: 15px;
+    width: 100%;
+}
+
+.emblem-container img {
+    width: 80%;
+    height: auto;
+    border: 1px solid rgba(0, 255, 255, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}

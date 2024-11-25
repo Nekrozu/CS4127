@@ -1,0 +1,178 @@
+/* General Reset and Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body, html {
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+  }
+  
+  /* Parallax Background */
+  .parallax {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+  
+  .star1 {
+    background-image: url('images/star_1.png');
+  }
+  
+  .star2 {
+    background-image: url('images/star_2.png');
+  }
+  
+  /* Cockpit Styling */
+  .cockpit {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cockpit img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Layout for Main Page */
+  .main-layout {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    padding: 20px;
+  }
+  
+  /* Up to this point, everything should be the same with all the css
+
+/* Left Column: Navigation List */
+.pilot-nav {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 10%; /* Slightly shifted to the right */
+  transform: translate(0, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.pilot-nav button{
+  border: none;
+  background: none;
+  color: white;
+  }
+
+.pilot-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pilot-nav ul li {
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.6);
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.pilot-nav ul li button:hover {
+  background-color: rgba(0, 255, 255, 0.4);
+}
+
+/* Middle Column: Pilot Details */
+.pilot-details .pilot-box {
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  width: 30%;
+  height: 70%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  color: white;
+}
+
+.pilot-details{
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pilot-details h1 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+}
+
+.pilot-details p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Right Column: Pilot Visuals */
+.pilot-visuals {
+  flex: 1;
+  padding-left: 20px;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 130px; /* Slightly shifted to the left */
+  transform: translate(0, -50%);
+}
+
+.vis-box{
+  color: white;
+  background-color: rgba(0, 255, 255, 0.2); /* Darker background for better contrast */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Consistent border color */
+  border-radius: 15px;
+  width: 65%;
+  height: 600px;
+  padding: 20px;
+  text-align: center;
+  right: 130px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.pilot-visuals img {
+    width: 70%;
+    border-radius: 10px;
+    right: 200px;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glowing effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pilot-visuals img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+}
+
+

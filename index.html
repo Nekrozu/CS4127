@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gundam Cockpit HUD - Main</title>
+    <title>The Gundam Experience</title>
     <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
+    <!-- Parallax Background Section -->
     <div class="parallax">
+        <!-- Star Background Layers -->
         <div class="stars star1"></div>
         <div class="stars star2"></div>
 
@@ -18,76 +20,72 @@
             <img src="images/Cockpit.png" alt="Cockpit">
         </div>
 
-        <!-- Boot-Up Screen -->
+        <!-- Boot-Up Screen (Hidden initially) -->
         <div class="hud-boot-box" id="hudBoot">
             <div class="hud-boot-content">
                 <span id="bootText"></span>
             </div>
         </div>
 
-        <!-- Main Page Layout -->
+        <!-- Main Content Layout (Hidden until boot animation is done) -->
         <div class="main-layout hidden" id="mainLayout">
-            <!-- Left Menu -->
+            
+            <!-- Left Menu Section (Navigation) -->
             <nav class="hud-nav">
+                <div class="hud-box">
                 <ul>
                     <li><a href="lore.html">Lore</a></li>
+                    <li><a href="faction.html">Factions</a></li>
                     <li><a href="pilot.html">Pilots</a></li>
                     <li><a href="ms.html">Mobile Suits</a></li>
-                    <li><a href="faction.html">Factions</a></li>
-                    <li><a href="timeline.html">Timeline</a></li>
-                    <li><a href="media.html">Media</a></li>
                 </ul>
+            </div>
             </nav>
 
-            <!-- Center Content -->
+            <!-- Center Content Section -->
             <section class="main-content">
                 <div class="content-box">
-                    <h1>Welcome to the Gundam Database</h1>
-                    <p>Your ultimate guide to everything Gundam, from the Universal Century to Ad Stella.</p>
-                    <hr style="border-color: rgba(0, 255, 255, 0.6); margin: 20px 0;">
-
-                    <h2>Quick Links</h2>
-                    <p>
-                        <a href="lore.html" style="color: cyan; text-decoration: underline;">Explore Lore</a> |
-                        <a href="ms.html" style="color: cyan; text-decoration: underline;">Mobile Suits</a> |
-                        <a href="timeline.html" style="color: cyan; text-decoration: underline;">Timelines</a>
-                    </p>
-
-                    <hr style="border-color: rgba(0, 255, 255, 0.6); margin: 20px 0;">
-
+                    <img src="images/Gundam_Logo.png" alt="Gundam Logo" class="content-logo">
+                    <hr>
+                    <br>
+                    <h1>Welcome to The Gundam Experiance Website</h1>
+                    <br>
+                    <p>your ultimate destination for exploring the captivating world of Gundam! Whether you're a seasoned fan, a curious newcomer, or someone rediscovering the legendary mecha universe, this site is designed to immerse you in all things Gundam.</p>
+                    <br>
+                    <hr>
+                    <br>
                     <h2>About This Site</h2>
+                    <br>
                     <p>
-                        Dive into the rich history, thrilling battles, and iconic characters of the Gundam universe.
-                        Whether you're a fan of the classic Universal Century or the futuristic Ad Stella, this database
-                        is your one-stop hub for all things Gundam.
+                        This website was created as part of a university assignment, blending my passion for Gundam with the skills I've developed in web design and storytelling. It serves as a platform to celebrate the franchise's incredible history, iconic mobile suits, and cultural impact, offering something for everyone, from casual viewers to dedicated enthusiasts.
+
+                        Through this project, I aimed to craft a space where visitors can dive into the lore, art, and innovations that make Gundam a timeless phenomenon. I hope you find inspiration, excitement, and a deeper appreciation for the Gundam universe during your visit.
+                        
+                        Thank you for stopping by and being a part of this journey!
                     </p>
-
-                    <hr style="border-color: rgba(0, 255, 255, 0.6); margin: 20px 0;">
-
-                    <h2>Latest Updates</h2>
-                    <p>Stay tuned for upcoming updates, including new entries, detailed timelines, and more.</p>
+                    <br>
+                    <hr>
+                    <br>
+                    <h2>Disclaimer</h2>
+                    <br>
+                    <p>All information on this site has been gathered from reliable sources, including <a href="https://en.gundam.info" target="_blank">Gundam.info</a> and <a href="https://gundam.fandom.com/wiki/The_Gundam_Wiki" target="_blank">The Gundam Wiki</a>. This website was created as part of a university assignment and is intended for educational and fan engagement purposes.</p>
                 </div>
             </section>
 
-            <!-- Right News Column -->
+            <!-- Right News Section -->
             <aside class="news-column">
                 <div class="news-box">
-                    <h2>Latest News</h2>
-                    <p>Explore the rich lore, iconic pilots, and legendary mobile suits from the Gundam Universe.</p>
-                    <ul>
-                        <li>Universal Century Timeline Updated</li>
-                        <li>New Gundam Model Announced</li>
-                        <li>Ad Stella Series Continues</li>
-                    </ul>
+                    <a class="twitter-timeline" data-lang="en" data-width="500" data-height="600" data-theme="dark" href="https://twitter.com/gundam_info?ref_src=twsrc%5Etfw">Tweets by gundam_info</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </aside>
         </div>
-
-
-        <script src="script.js"></script>
     </div>
+
+    <script src="script.js"></script>
 </body>
 
 <footer>
     <p>Placeholder</p>
 </footer>
+
+</html>
