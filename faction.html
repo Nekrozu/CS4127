@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Factions - Gundam Universe</title>
+    <!-- Link to external CSS file for styling -->
     <link rel="stylesheet" href="faction.css">
 </head>
-
 <body>
     <div class="parallax">
+        <!-- Star background layers for a parallax effect -->
         <div class="stars star1"></div>
         <div class="stars star2"></div>
 
-        <!-- Cockpit Image -->
+        <!-- Cockpit Image Header -->
         <header class="cockpit">
             <img src="images/Cockpit.png" alt="Cockpit">
         </header>
 
-        <!-- Main Layout -->
+        <!-- Main content layout -->
         <main class="main-layout">
-            <!-- Left Column: Faction Menu -->
+            <!-- Left Column: Navigation for selecting factions -->
             <nav class="hud-nav" aria-label="Faction Navigation">
+                <!-- Link to return to the home page -->
                 <a href="index.html" class="back-btn" aria-label="Back to Home">Return</a>
                 <ul>
+                    <!-- Buttons for each faction -->
                     <li><button class="faction-btn" data-faction="earth-federation">Earth Federation</button></li>
                     <li><button class="faction-btn" data-faction="zeon">Principality of Zeon</button></li>
                     <li><button class="faction-btn" data-faction="aeug">Anti-Earth Union Group</button></li>
@@ -33,7 +35,7 @@
                 </ul>
             </nav>
 
-            <!-- Center Column: Faction Description -->
+            <!-- Center Column: Display faction descriptions -->
             <section class="faction-description">
                 <div class="des-box">
                     <h1>Factions in the Gundam Universe</h1>
@@ -44,18 +46,29 @@
                 </div>
             </section>
 
-            <!-- Right Column: Faction Images -->
+            <!-- Right Column: Faction Emblems -->
             <aside class="faction-visuals">
                 <div class="vis-box">
                     <h2>Faction Emblems</h2>
                     <div class="emblem-container">
+                        <!-- Placeholder for dynamic faction emblems -->
                     </div>
                 </div>
             </aside>
         </main>
     </div>
 
+    <!-- Link to external JavaScript for dynamic interactions -->
     <script src="faction.js"></script>
 </body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 The Gundam Experience. All Rights Reserved.</p>
+        <p>Website created by Hakimi | University Assignment Project</p>
+        <p>Sources: <a href="https://en.gundam.info" target="_blank">Gundam.info</a>, <a
+                href="https://gundam.fandom.com/wiki/The_Gundam_Wiki" target="_blank">The Gundam Wiki</a></p>
+    </div>
+</footer>
 
 </html>

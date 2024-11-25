@@ -2,30 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lore - Gundam Universe</title>
-    <link rel="stylesheet" href="lore.css">
+    <!-- Metadata -->
+    <meta charset="UTF-8"> <!-- Specify character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make responsive on all devices -->
+    <title>Lore - Gundam Universe</title> <!-- Title for the browser tab -->
+    <link rel="stylesheet" href="lore.css"> <!-- Link to the external CSS file for styling -->
 </head>
 
 <body>
     <!-- Parallax Background Section -->
     <div class="parallax">
         <!-- Star Background Layers -->
+        <!-- These layers create a parallax scrolling effect for immersive visuals -->
         <div class="stars star1"></div>
         <div class="stars star2"></div>
 
         <!-- Cockpit Image -->
+        <!-- Positioned as a central overlay element -->
         <header class="cockpit">
-            <img src="images/Cockpit.png" alt="Cockpit">
+            <img src="images/Cockpit.png" alt="Cockpit"> <!-- Cockpit image with descriptive alt text -->
         </header>
 
         <!-- Main Layout -->
+        <!-- Divides the page into left, center, and right columns -->
         <main class="main-layout">
             <!-- Left Column: Timeline Menu -->
             <nav class="hud-nav" aria-label="Timeline Navigation">
-                <a href="index.html" class="back-btn" aria-label="Back to Home">←</a>
+                <!-- Back Button -->
+                <a href="index.html" class="back-btn" aria-label="Back to Home">←</a> <!-- Navigation to the homepage -->
                 <ul>
+                    <!-- List of timeline buttons, each linked to a data attribute -->
                     <li><button class="timeline-btn" data-timeline="universal-century">Universal Century</button></li>
                     <li><button class="timeline-btn" data-timeline="future-century">Future Century</button></li>
                     <li><button class="timeline-btn" data-timeline="after-colony">After Colony</button></li>
@@ -39,37 +45,49 @@
             <!-- Middle Column: Explanation -->
             <section class="lore-description">
                 <div class="content-box">
-                <header>
-                    <h1>Lore of the Gundam Universe</h1>
-                    <br>
-                </header>
-                <article>
-                    <img class="uc_map" src="images/UC_Map.png" alt="Universal Century Earth Map">
-                    <br>
-                    <p>Explore the history, beliefs, and iconic figures behind each faction, uncovering their motivations, struggles, and the pivotal events that shaped their destinies in the Gundam universe. We'll begin by delving into the factions from the Universal Century, the cornerstone of the Gundam franchise. Additional timelines and their factions will be added at a later date, so stay tuned for updates!
-                    </p>
-                </article>
-            </div>
+                    <header>
+                        <h1>Lore of the Gundam Universe</h1> <!-- Page heading -->
+                        <br>
+                    </header>
+                    <article>
+                        <!-- Content including an image and descriptive text -->
+                        <img class="uc_map" src="images/UC_Map.png" alt="Universal Century Earth Map">
+                        <br>
+                        <p>
+                            Explore the history, beliefs, and iconic figures behind each faction, uncovering their motivations, struggles, 
+                            and the pivotal events that shaped their destinies in the Gundam universe. We'll begin by delving into the factions
+                            from the Universal Century, the cornerstone of the Gundam franchise. Additional timelines and their factions will 
+                            be added at a later date, so stay tuned for updates!
+                        </p>
+                    </article>
+                </div>
             </section>
 
             <!-- Right Column: Gundam Series -->
             <aside class="watch-series">
                 <div class="watch-box">
-                <header>
-                    <h2>Watch Guide</h2>
-                </header>
-                <br>
-                <p>Here is how you can start watching Gundam:</p>
-                <br>
-                <blockquote class="reddit-embed-bq" style="height:316px" data-embed-locale="en-EN" data-embed-theme="dark" data-embed-height="316"><a href="https://www.reddit.com/r/MobileSuitGundam/comments/rlthj1/how_do_i_start_the_series/">How do I start the series?</a><br> by<a href="https://www.reddit.com/user/_nightsnotover/">u/_nightsnotover</a> in<a href="https://www.reddit.com/r/MobileSuitGundam/">MobileSuitGundam</a></blockquote><script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
-                <br>
-                <hr>
-                <br>
-                <p>Youtube Playlist (Not Every Series Is On Youtube)</p>
-                <br>
-                <ul>
-                    <li><a href="https://www.youtube.com/@GundamInfo/playlists" target="_blank" rel="noopener noreferrer">Anime Playlist</a></li>
-                </ul>
+                    <header>
+                        <h2>Watch Guide</h2> <!-- Section heading -->
+                    </header>
+                    <br>
+                    <p>Here is how you can start watching Gundam:</p>
+                    <br>
+                    <!-- Embedded Reddit widget -->
+                    <blockquote class="reddit-embed-bq" style="height:316px" data-embed-locale="en-EN" data-embed-theme="dark" data-embed-height="316">
+                        <a href="https://www.reddit.com/r/MobileSuitGundam/comments/rlthj1/how_do_i_start_the_series/">How do I start the series?</a><br> 
+                        by <a href="https://www.reddit.com/user/_nightsnotover/">u/_nightsnotover</a> in 
+                        <a href="https://www.reddit.com/r/MobileSuitGundam/">MobileSuitGundam</a>
+                    </blockquote>
+                    <script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script> <!-- Script for Reddit embed -->
+                    <br>
+                    <hr>
+                    <br>
+                    <p>Youtube Playlist (Not Every Series Is On Youtube)</p>
+                    <br>
+                    <!-- External YouTube playlist link -->
+                    <ul>
+                        <li><a href="https://www.youtube.com/@GundamInfo/playlists" target="_blank" rel="noopener noreferrer">Anime Playlist</a></li>
+                    </ul>
                 </div>
             </aside>
         </main>
@@ -77,6 +95,7 @@
         <!-- Timeline Popup Modal -->
         <section id="timeline-modal" class="timeline-modal" aria-hidden="true" role="dialog" aria-label="Timeline Details">
             <div class="modal-content">
+                <!-- Close button for the modal -->
                 <button class="close-btn" aria-label="Close Timeline Modal">&times;</button>
                 <div class="timeline-container">
                     <!-- Timeline Structure -->
@@ -84,6 +103,7 @@
                         <div class="timeline-progress"></div>
         
                         <!-- Timeline Events -->
+                        <!-- Each event includes a dot marker and an associated popup -->
                         <div class="timeline-event" data-year="0079">
                             <div class="event-dot"></div>
                             <div class="event-popup">
@@ -113,7 +133,17 @@
         </section>
     </div>
 
+    <!-- JavaScript file link -->
     <script src="lore.js"></script>
 </body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 The Gundam Experience. All Rights Reserved.</p>
+        <p>Website created by Hakimi | University Assignment Project</p>
+        <p>Sources: <a href="https://en.gundam.info" target="_blank">Gundam.info</a>, <a
+                href="https://gundam.fandom.com/wiki/The_Gundam_Wiki" target="_blank">The Gundam Wiki</a></p>
+    </div>
+</footer>
 
 </html>

@@ -2,28 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pilots - Gundam Universe</title>
-    <link rel="stylesheet" href="pilot.css">
+    <meta charset="UTF-8"> <!-- Defines the character encoding for the document. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures proper rendering on mobile devices. -->
+    <title>Pilots - Gundam Universe</title> <!-- Sets the page title displayed on the browser tab. -->
+    <link rel="stylesheet" href="pilot.css"> <!-- Links to the external CSS file for styling. -->
 </head>
 
 <body>
-    <div class="parallax">
-        <div class="stars star1"></div>
-        <div class="stars star2"></div>
+    <div class="parallax"> <!-- Wrapper for the parallax scrolling background. -->
+        <div class="stars star1"></div> <!-- First star layer for the parallax effect. -->
+        <div class="stars star2"></div> <!-- Second star layer for added depth in the parallax. -->
 
         <!-- Cockpit Image -->
         <header class="cockpit">
-            <img src="images/Cockpit.png" alt="Cockpit">
+            <img src="images/Cockpit.png" alt="Cockpit"> <!-- Displays the cockpit image with a descriptive alt text. -->
         </header>
 
         <!-- Main Layout -->
         <main class="main-layout">
             <!-- Left Column: Pilot Navigation -->
-            <nav class="pilot-nav" aria-label="Pilot Navigation">
-                <a href="index.html" class="back-btn" aria-label="Back to Home">Return</a>
+            <nav class="pilot-nav" aria-label="Pilot Navigation"> <!-- Semantic element for navigation with an accessible label. -->
+                <a href="index.html" class="back-btn" aria-label="Back to Home">Return</a> <!-- Link to return to the home page. -->
                 <ul>
+                    <!-- List of buttons to select different pilots -->
                     <li><button class="pilot-btn" data-pilot="amuro-ray">Amuro Ray</button></li>
                     <li><button class="pilot-btn" data-pilot="char-aznable">Char Aznable</button></li>
                     <li><button class="pilot-btn" data-pilot="kamille-bidan">Kamille Bidan</button></li>
@@ -34,29 +35,38 @@
             </nav>
 
             <!-- Center Column: Pilot Description -->
-            <section class="pilot-details">
-                <div class="pilot-box">
-                    <h1>Pilots in the Gundam Universe</h1>
-                    <article class="pilot-content">
-                        <h2>Select a pilot to learn more</h2>
-                        <p>Uncover the stories of legendary Gundam pilots, their struggles, and their contributions to the wars they fought in. From Amuro Ray to Setsuna F. Seiei, learn what makes each pilot a critical piece of the Gundam saga. Click on a pilot from the navigation to view detailed bios, their Mobile Suits, and key battles.</p>
+            <section class="pilot-details"> <!-- Semantic section for pilot information. -->
+                <div class="pilot-box"> <!-- Container for the pilot details. -->
+                    <h1>Pilots in the Gundam Universe</h1> <!-- Main heading for the section. -->
+                    <article class="pilot-content"> <!-- Semantic container for textual content. -->
+                        <h2>Select a pilot to learn more</h2> <!-- Subheading for instructions. -->
+                        <p>Uncover the stories of legendary Gundam pilots, their struggles, and their contributions to the wars they fought in. From Amuro Ray to Setsuna F. Seiei, learn what makes each pilot a critical piece of the Gundam saga. Click on a pilot from the navigation to view detailed bios, their Mobile Suits, and key battles.</p> <!-- Brief description of the content. -->
                     </article>
                 </div>
             </section>
 
             <!-- Right Column: Pilot Visuals -->
-            <aside class="pilot-visuals">
-                <div class="vis-box">
-                    <h2>Pilot Images</h2>
-                    <div class="image-container">
-                        <img src="images/pilot.png" alt="Default Pilot Image" class="default-image">
+            <aside class="pilot-visuals"> <!-- Semantic container for additional visual information. -->
+                <div class="vis-box"> <!-- Wrapper for pilot visuals. -->
+                    <h2>Pilot Images</h2> <!-- Subheading for the visuals section. -->
+                    <div class="image-container"> <!-- Container for the pilot image. -->
+                        <img src="images/pilot.png" alt="Default Pilot Image" class="default-image"> <!-- Placeholder image with descriptive alt text. -->
                     </div>
                 </div>
             </aside>
         </main>
     </div>
 
-    <script src="pilot.js"></script>
+    <script src="pilot.js"></script> <!-- Links to the external JavaScript file for interactivity. -->
 </body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 The Gundam Experience. All Rights Reserved.</p>
+        <p>Website created by Hakimi | University Assignment Project</p>
+        <p>Sources: <a href="https://en.gundam.info" target="_blank">Gundam.info</a>, <a
+                href="https://gundam.fandom.com/wiki/The_Gundam_Wiki" target="_blank">The Gundam Wiki</a></p>
+    </div>
+</footer>
 
 </html>

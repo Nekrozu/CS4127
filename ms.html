@@ -5,25 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobile Suits - Gundam Universe</title>
-    <link rel="stylesheet" href="ms.css">
+    <link rel="stylesheet" href="ms.css"> <!-- Links to the external CSS file for styling -->
 </head>
 
 <body>
-    <div class="parallax">
-        <div class="stars star1"></div>
-        <div class="stars star2"></div>
+    <div class="parallax"> <!-- Parallax container for background layers -->
+        <div class="stars star1"></div> <!-- Background layer 1 for stars -->
+        <div class="stars star2"></div> <!-- Background layer 2 for stars -->
 
         <!-- Cockpit Image -->
-        <header class="cockpit">
-            <img src="images/Cockpit.png" alt="Cockpit">
+        <header class="cockpit"> <!-- Cockpit header overlay -->
+            <img src="images/Cockpit.png" alt="Cockpit"> <!-- Cockpit visual -->
         </header>
 
         <!-- Main Layout -->
-        <main class="main-layout">
+        <main class="main-layout"> <!-- Main container for layout -->
+
             <!-- Left Column: Mobile Suit Menu -->
-            <nav class="hud-nav" aria-label="Mobile Suit Navigation">
-                <a href="index.html" class="back-btn" aria-label="Back to Home">Return</a>
-                <ul>
+            <nav class="hud-nav" aria-label="Mobile Suit Navigation"> <!-- Navigation menu -->
+                <a href="index.html" class="back-btn" aria-label="Back to Home">Return</a> <!-- Return to home link -->
+                <ul> <!-- List of Mobile Suit buttons -->
                     <li><button class="mobile-suit-btn" data-suit="rx-78-2-gundam">RX-78-2 Gundam</button></li>
                     <li><button class="mobile-suit-btn" data-suit="zaku-ii">Zaku II</button></li>
                     <li><button class="mobile-suit-btn" data-suit="wing-zero">Wing Gundam Zero</button></li>
@@ -31,28 +32,37 @@
             </nav>
 
             <!-- Center Column: Mobile Suit Description -->
-            <section class="mobile-suit-description">
-                <div class="des-box">
-                    <h1>Mobile Suits in the Gundam Universe</h1>
-                    <article class="mobile-suit-content">
-                        <h2>Select a Mobile Suit to learn more</h2>
-                        <p>Dive into the details of iconic Mobile Suits from the Gundam universe. Learn about their specifications, unique features, and the pivotal roles they played in the stories. From the Universal Century to alternate timelines, each suit holds a significant legacy.</p>
+            <section class="mobile-suit-description"> <!-- Section for suit descriptions -->
+                <div class="des-box"> <!-- Box for descriptive content -->
+                    <h1>Mobile Suits in the Gundam Universe</h1> <!-- Title -->
+                    <article class="mobile-suit-content"> <!-- Article for content -->
+                        <h2>Select a Mobile Suit to learn more</h2> <!-- Subheading -->
+                        <p>Dive into the details of iconic Mobile Suits from the Gundam universe. Learn about their specifications, unique features, and the pivotal roles they played in the stories. From the Universal Century to alternate timelines, each suit holds a significant legacy.</p> <!-- Content paragraph -->
                     </article>
                 </div>
             </section>
 
             <!-- Right Column: Mobile Suit Visuals -->
-            <aside class="mobile-suit-visuals">
-                <div class="vis-box">
-                    <h2>Mobile Suit Designs</h2>
-                    <div class="suit-image-container">
+            <aside class="mobile-suit-visuals"> <!-- Sidebar for visuals -->
+                <div class="vis-box"> <!-- Box for visual display -->
+                    <h2>Mobile Suit Designs</h2> <!-- Section title -->
+                    <div class="suit-image-container"> <!-- Placeholder for dynamic images -->
                     </div>
                 </div>
             </aside>
         </main>
     </div>
 
-    <script src="ms.js"></script>
+    <script src="ms.js"></script> <!-- External JavaScript file -->
 </body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 The Gundam Experience. All Rights Reserved.</p>
+        <p>Website created by Hakimi | University Assignment Project</p>
+        <p>Sources: <a href="https://en.gundam.info" target="_blank">Gundam.info</a>, <a
+                href="https://gundam.fandom.com/wiki/The_Gundam_Wiki" target="_blank">The Gundam Wiki</a></p>
+    </div>
+</footer>
 
 </html>

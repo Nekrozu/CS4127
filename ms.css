@@ -1,174 +1,218 @@
-/* General Reset and Base */
+/* 
+General Reset and Base 
+Purpose: Ensures consistent styling across browsers by resetting default margins, paddings, and box models.
+Source: Inspired by CSS Reset techniques from Eric Meyer's Reset CSS.
+*/
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  margin: 0; /* Removes default spacing */
+  padding: 0; /* Removes default padding */
+  box-sizing: border-box; /* Ensures padding and borders are included in width and height */
+  font-family: 'Arial', sans-serif; /* Sets a consistent font family */
 }
 
 body, html {
-  height: 100%;
-  background-color: black;
-  overflow: hidden;
+  height: 100%; /* Makes sure the page spans the full viewport */
+  background-color: black; /* Sets a sci-fi-themed black background */
+  overflow: hidden; /* Prevents scrolling for immersive fullscreen visuals */
 }
 
-/* Parallax Background */
+/* 
+Parallax Background
+Purpose: Creates a layered effect for the background, mimicking depth with repeating star patterns.
+*/
+
 .parallax {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+  position: relative; /* Enables positioning of child elements */
+  width: 100%; /* Spans the entire viewport width */
+  height: 100%; /* Spans the entire viewport height */
+  overflow: hidden; /* Hides any elements outside the container */
 }
 
 .stars {
-  position: absolute;
+  position: absolute; /* Allows independent placement within the container */
   width: 100%;
   height: 100%;
-  background-position: center;
-  background-repeat: repeat;
-  background-size: cover;
-  z-index: 1;
+  background-position: center; /* Centers the background image */
+  background-repeat: repeat; /* Repeats the background image for seamless coverage */
+  background-size: cover; /* Ensures the background scales proportionally */
+  z-index: 1; /* Places stars behind other elements */
 }
 
+/* Adds different layers of stars for a parallax effect */
 .star1 {
-  background-image: url('images/star_1.png');
+  background-image: url('images/star_1.png'); /* Layer 1: Primary stars */
 }
 
 .star2 {
-  background-image: url('images/star_2.png');
+  background-image: url('images/star_2.png'); /* Layer 2: Secondary stars */
 }
 
-/* Cockpit Styling */
+/* 
+Cockpit Styling 
+Purpose: Displays the cockpit overlay with a responsive image and slight animation for interactivity.
+*/
+
 .cockpit {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  display: flex;
+  position: absolute; /* Ensures it overlays the background */
+  width: 100%; /* Matches the viewport width */
+  height: 100%; /* Matches the viewport height */
+  z-index: 2; /* Renders above the stars */
+  display: flex; /* Centers the image using Flexbox */
   justify-content: center;
   align-items: center;
 }
 
 .cockpit img {
-  width: 100%;
-  height: auto;
-  transition: transform 0.1s ease-out;
+  width: 100%; /* Ensures the image scales responsively */
+  height: auto; /* Maintains the image's aspect ratio */
+  transition: transform 0.1s ease-out; /* Smooth animation on transformations */
 }
 
-/* Layout for Main Page */
+/* 
+Main Layout 
+Purpose: Defines the structure for the 3-column layout.
+*/
+
 .main-layout {
-  position: relative;
-  display: flex;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  padding: 20px;
+  position: relative; /* Positions child elements relative to this container */
+  display: flex; /* Creates a flexible box layout */
+  width: 100%; /* Spans the full width of the viewport */
+  height: 100%; /* Spans the full height of the viewport */
+  z-index: 3; /* Renders above the cockpit */
+  padding: 20px; /* Adds spacing within the layout */
 }
 
-/* Up to this point, everything should be the same with all the css
+/* 
+HUD Navigation (Left Column)
+Purpose: Creates an interactive menu for selecting mobile suits.
+Source: Accessible navigation design principles (W3C Accessibility Guidelines).
+*/
 
-/* Left Column: Navigation List */
 .hud-nav {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 10%; /* Slightly shifted to the right */
-  transform: translate(0, -50%);
-  z-index: 10;
+  position: absolute; /* Anchors it to the viewport */
+  top: 50%; /* Vertically centers it */
+  left: 10%; /* Positions it slightly to the right */
+  transform: translate(0, -50%); /* Adjusts for centering offset */
+  z-index: 10; /* Ensures it is above other elements */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
 }
 
-.hud-nav button{
-  border: none;
-  background: none;
-  color: white;
-  }
+.hud-nav button {
+  border: none; /* Removes default button borders */
+  background: none; /* Transparent background for seamless visuals */
+  color: white; /* Matches the overall sci-fi theme */
+}
 
 .hud-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  list-style: none; /* Removes default bullet points */
+  display: flex; /* Flexbox layout for menu items */
+  flex-direction: column; /* Stacks items vertically */
+  gap: 15px; /* Adds space between items */
 }
 
 .hud-nav ul li {
-  background-color: rgba(0, 255, 255, 0.2);
-  border: 1px solid rgba(0, 255, 255, 0.6);
-  padding: 10px 20px;
-  text-align: center;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  background-color: rgba(0, 255, 255, 0.2); /* Transparent background for the button */
+  border: 1px solid rgba(0, 255, 255, 0.6); /* Cyan border for a glowing effect */
+  padding: 10px 20px; /* Adds internal spacing */
+  text-align: center; /* Centers the text */
+  border-radius: 10px; /* Rounds the corners for a modern design */
+  transition: background-color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .hud-nav ul li button:hover {
-  background-color: rgba(0, 255, 255, 0.4);
+  background-color: rgba(0, 255, 255, 0.4); /* Slightly brighter background on hover */
 }
 
-/* Middle Column: Pilot Details */
+/* 
+Mobile Suit Description (Middle Column)
+Purpose: Displays detailed information about selected mobile suits.
+*/
+
 .mobile-suit-description .des-box {
-  background-color: rgba(0, 255, 255, 0.2);
-  border: 2px solid rgba(0, 255, 255, 0.6);
-  padding: 20px;
-  border-radius: 15px;
-  width: 30%;
-  height: 70%;
-  margin: 0 auto;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-  color: white;
-}
-
-.mobile-suit-description{
-  flex: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: rgba(0, 255, 255, 0.2); /* Semi-transparent background for text readability */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Cyan border for visual separation */
+  padding: 20px; /* Adds internal spacing */
+  border-radius: 15px; /* Rounds the corners */
+  width: 30%; /* Sets the width relative to the layout */
+  height: 70%; /* Sets a fixed height */
+  margin: 0 auto; /* Centers it horizontally */
+  text-align: center; /* Centers the text content */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing effect */
+  color: white; /* White text for readability */
 }
 
 .mobile-suit-description h1 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  margin-bottom: 15px; /* Adds spacing below the title */
+  font-size: 24px; /* Sets a consistent title size */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Adds a glowing effect to the text */
 }
 
 .mobile-suit-description p {
-    font-size: 18px;
-    line-height: 1.6;
+  font-size: 18px; /* Increases readability */
+  line-height: 1.6; /* Improves spacing between lines */
 }
 
-/* Right Column: Pilot Visuals */
+/* 
+Mobile Suit Visuals (Right Column)
+Purpose: Displays images or designs of the selected mobile suit.
+*/
+
 .mobile-suit-visuals {
-  flex: 1;
-  padding-left: 20px;
-  position: absolute;
-  top: 50%; /* Center vertically */
-  right: 120px; /* Slightly shifted to the left */
-  transform: translate(0, -50%);
+  flex: 1; /* Takes up remaining space */
+  padding-left: 20px; /* Adds spacing on the left */
+  position: absolute; /* Allows precise positioning */
+  top: 50%; /* Centers it vertically */
+  right: 120px; /* Slightly offsets it from the right edge */
+  transform: translate(0, -50%); /* Corrects vertical alignment */
 }
 
-.vis-box{
-  color: white;
-  background-color: rgba(0, 255, 255, 0.2); /* Darker background for better contrast */
-  border: 2px solid rgba(0, 255, 255, 0.6); /* Consistent border color */
-  border-radius: 15px;
-  width: 65%;
-  height: 600px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-  overflow: hidden; /* Hide any overflowing content */
+.vis-box {
+  color: white; /* Matches the theme */
+  background-color: rgba(0, 255, 255, 0.2); /* Semi-transparent background */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Consistent border style */
+  border-radius: 15px; /* Rounds the corners */
+  width: 65%; /* Sets relative width */
+  height: 600px; /* Fixed height */
+  padding: 20px; /* Adds spacing inside */
+  text-align: center; /* Centers text content */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Adds a glowing effect */
+  overflow: hidden; /* Prevents overflowing content */
 }
 
 .mobile-suit-visuals img {
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glowing effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 80%; /* Scales images */
+  border-radius: 10px; /* Rounds the image edges */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glow around images */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
 }
 
 .mobile-suit-visuals img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.9); /* Intensifies the glow on hover */
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .cockpit {
+    display: none; /* Hides cockpit on smaller screens */
+  }
+
+  .main-layout {
+    flex-direction: column; /* Stacks elements vertically */
+  }
+
+  .hud-nav {
+    position: relative; /* Adapts to mobile layouts */
+  }
+
+  .main-content .content-box {
+    width: 90%; /* Expands content area for mobile */
+  }
+
+  .news-column {
+    position: relative; /* Adjusts to flow naturally in mobile layouts */
+  }
 }

@@ -1,178 +1,195 @@
 /* General Reset and Base */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  body, html {
-    height: 100%;
-    background-color: black;
-    overflow: hidden;
-  }
-  
-  /* Parallax Background */
-  .parallax {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .stars {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    z-index: 1;
-  }
-  
-  .star1 {
-    background-image: url('images/star_1.png');
-  }
-  
-  .star2 {
-    background-image: url('images/star_2.png');
-  }
-  
-  /* Cockpit Styling */
-  .cockpit {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .cockpit img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.1s ease-out;
-  }
-  
-  /* Layout for Main Page */
-  .main-layout {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    padding: 20px;
-  }
-  
-  /* Up to this point, everything should be the same with all the css
+  margin: 0; /* Remove default margin from all elements */
+  padding: 0; /* Remove default padding from all elements */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's dimensions */
+  font-family: 'Arial', sans-serif; /* Sets a clean, readable font */
+}
+
+body, html {
+  height: 100%; /* Makes body and HTML take up the full viewport height */
+  background-color: black; /* Sets the background color to black */
+  overflow: hidden; /* Hides overflow to prevent scrolling */
+}
+
+/* Parallax Background */
+.parallax {
+  position: relative; /* Allows child elements to be positioned absolutely */
+  width: 100%; /* Full width of the viewport */
+  height: 100%; /* Full height of the viewport */
+  overflow: hidden; /* Prevents overflow from breaking layout */
+}
+
+.stars {
+  position: absolute; /* Positions stars in relation to the .parallax container */
+  width: 100%;
+  height: 100%;
+  background-position: center; /* Centers the background image */
+  background-repeat: repeat; /* Allows the background image to repeat */
+  background-size: cover; /* Ensures the background image covers the entire container */
+  z-index: 1; /* Layers the stars below other elements */
+}
+
+.star1 {
+  background-image: url('images/star_1.png'); /* Sets the first star layer */
+}
+
+.star2 {
+  background-image: url('images/star_2.png'); /* Sets the second star layer */
+}
+
+/* Cockpit Styling */
+.cockpit {
+  position: absolute; /* Positions cockpit over the background */
+  width: 100%;
+  height: 100%;
+  z-index: 2; /* Layers the cockpit above the stars */
+  display: flex; /* Centers content using flexbox */
+  justify-content: center; /* Horizontally centers content */
+  align-items: center; /* Vertically centers content */
+}
+
+.cockpit img {
+  width: 100%; /* Ensures the image scales to fit the container width */
+  height: auto; /* Maintains the image aspect ratio */
+  transition: transform 0.1s ease-out; /* Adds smooth scaling animation */
+}
+
+/* Layout for Main Page */
+.main-layout {
+  position: relative;
+  display: flex; /* Enables a flexible layout for child elements */
+  width: 100%;
+  height: 100%;
+  z-index: 3; /* Layers this section above the cockpit */
+  padding: 20px; /* Adds spacing inside the layout */
+}
 
 /* Left Column: Navigation List */
 .pilot-nav {
   position: absolute;
-  top: 50%; /* Center vertically */
-  left: 10%; /* Slightly shifted to the right */
-  transform: translate(0, -50%);
-  z-index: 10;
+  top: 50%; /* Centers navigation vertically */
+  left: 10%; /* Positions it slightly to the right of the left edge */
+  transform: translate(0, -50%); /* Corrects centering offset */
+  z-index: 10; /* Ensures it's above the other elements */
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 1;
+  flex: 1; /* Makes it responsive */
 }
 
-.pilot-nav button{
-  border: none;
-  background: none;
-  color: white;
-  }
+.pilot-nav button {
+  border: none; /* Removes the default border */
+  background: none; /* Removes the default button background */
+  color: white; /* Sets button text color to white */
+}
 
 .pilot-nav ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  list-style: none; /* Removes default list styling */
+  display: flex; /* Aligns navigation items */
+  flex-direction: column; /* Stacks items vertically */
+  gap: 15px; /* Adds spacing between items */
 }
 
 .pilot-nav ul li {
-  background-color: rgba(0, 255, 255, 0.2);
-  border: 1px solid rgba(0, 255, 255, 0.6);
-  padding: 10px 20px;
+  background-color: rgba(0, 255, 255, 0.2); /* Adds a translucent cyan background */
+  border: 1px solid rgba(0, 255, 255, 0.6); /* Defines the border color */
+  padding: 10px 20px; /* Adds internal spacing */
   text-align: center;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  border-radius: 10px; /* Rounds the corners */
+  transition: background-color 0.3s ease; /* Smooth color change on hover */
 }
 
 .pilot-nav ul li button:hover {
-  background-color: rgba(0, 255, 255, 0.4);
+  background-color: rgba(0, 255, 255, 0.4); /* Brightens the background on hover */
 }
 
 /* Middle Column: Pilot Details */
 .pilot-details .pilot-box {
-  background-color: rgba(0, 255, 255, 0.2);
-  border: 2px solid rgba(0, 255, 255, 0.6);
+  background-color: rgba(0, 255, 255, 0.2); /* Adds a translucent cyan background */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Consistent border color */
   padding: 20px;
   border-radius: 15px;
-  width: 30%;
-  height: 70%;
-  margin: 0 auto;
+  width: 30%; /* Restricts width */
+  height: 70%; /* Restricts height */
+  margin: 0 auto; /* Centers the box horizontally */
   text-align: center;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-  color: white;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing effect */
+  color: white; /* Text color */
 }
 
-.pilot-details{
-  flex: 2;
+.pilot-details {
+  flex: 2; /* Takes up two portions of the flex layout */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
 }
 
 .pilot-details h1 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    text-shadow: 0 0 10px rgba(0, 255, 255, 0.6);
+  margin-bottom: 15px; /* Adds spacing below the heading */
+  font-size: 24px; /* Sets font size */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Glowing text effect */
 }
 
 .pilot-details p {
-    font-size: 18px;
-    line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6; /* Improves readability */
 }
 
 /* Right Column: Pilot Visuals */
 .pilot-visuals {
-  flex: 1;
+  flex: 1; /* Takes up one portion of the flex layout */
   padding-left: 20px;
   position: absolute;
-  top: 50%; /* Center vertically */
-  right: 130px; /* Slightly shifted to the left */
+  top: 50%; /* Centers visuals vertically */
+  right: 130px; /* Positions visuals slightly to the left of the right edge */
   transform: translate(0, -50%);
 }
 
-.vis-box{
+.vis-box {
   color: white;
-  background-color: rgba(0, 255, 255, 0.2); /* Darker background for better contrast */
-  border: 2px solid rgba(0, 255, 255, 0.6); /* Consistent border color */
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(0, 255, 255, 0.6);
   border-radius: 15px;
-  width: 65%;
-  height: 600px;
+  width: 65%; /* Restricts the width */
+  height: 600px; /* Sets a fixed height */
   padding: 20px;
   text-align: center;
-  right: 130px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
-  overflow: hidden; /* Hide any overflowing content */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Adds glow */
+  overflow: hidden; /* Hides content overflowing outside */
 }
 
 .pilot-visuals img {
-    width: 70%;
-    border-radius: 10px;
-    right: 200px;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glowing effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 70%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glowing effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transitions */
 }
 
 .pilot-visuals img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.9);
+  transform: scale(1.05); /* Slightly enlarges the image on hover */
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.9); /* Enhances glow on hover */
 }
 
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .cockpit {
+    display: none; /* Hides cockpit on smaller screens */
+  }
 
+  .main-layout {
+    flex-direction: column; /* Stacks elements vertically */
+  }
+
+  .hud-nav {
+    position: relative; /* Adapts to mobile layouts */
+  }
+
+  .main-content .content-box {
+    width: 90%; /* Expands content area for mobile */
+  }
+
+  .news-column {
+    position: relative; /* Adjusts to flow naturally in mobile layouts */
+  }
+}
