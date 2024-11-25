@@ -1,145 +1,288 @@
-/* GENERAL RESET AND BASE STYLING */
+/* General Reset and Base */
 * {
-  margin: 0; /* Removes default margins */
-  padding: 0; /* Removes default padding */
-  box-sizing: border-box; /* Includes padding and border in width/height calculations */
-  font-family: 'Arial', sans-serif; /* Ensures consistent font across browsers */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
 body, html {
-  height: 100%; /* Ensures the body and HTML take up full viewport height */
-  background-color: black; /* Sets a dark theme background */
-  overflow: hidden; /* Prevents scrolling for the immersive effect */
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
 }
 
-/* PARALLAX BACKGROUND */
+/* Parallax Background */
 .parallax {
-  position: relative; /* Allows child elements to position relative to this container */
+  position: relative;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Ensures content doesn't overflow the container */
+  overflow: hidden;
 }
 
 .stars {
-  position: absolute; /* Positions each layer absolutely within the .parallax container */
+  position: absolute;
   width: 100%;
   height: 100%;
   background-position: center;
-  background-repeat: repeat; /* Repeats the star background */
-  background-size: cover; /* Ensures the background covers the container */
-  z-index: 1; /* Places the stars below other elements */
+  background-repeat: repeat;
+  background-size: cover;
+  z-index: 1;
 }
 
 .star1 {
-  background-image: url('images/star_1.png'); /* First layer of stars */
+  background-image: url('images/star_1.png');
 }
 
 .star2 {
-  background-image: url('images/star_2.png'); /* Second layer of stars */
+  background-image: url('images/star_2.png');
 }
 
-/* COCKPIT STYLING */
+/* Cockpit Styling */
 .cockpit {
-  position: absolute; /* Keeps the cockpit centered in the viewport */
+  position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 2; /* Places the cockpit above stars but below layout */
-  display: flex;
-  justify-content: center;
-  align-items: center; /* Centers the cockpit image */
-}
-
-.cockpit img {
-  width: 100%; /* Ensures the image scales responsively */
-  height: auto; /* Maintains aspect ratio */
-  transition: transform 0.1s ease-out; /* Smoothens animations for cockpit interactions */
-}
-
-/* MAIN LAYOUT */
-.main-layout {
-  position: relative;
-  display: flex; /* Flexbox ensures a responsive layout */
-  width: 100%;
-  height: 100%;
-  z-index: 3; /* Ensures layout is above cockpit */
-  padding: 20px; /* Adds padding for spacing */
-}
-
-/* BOOT-UP ANIMATION */
-.hud-boot-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Centers the boot-up box */
-  z-index: 20; /* Places the boot-up animation above everything */
-}
-
-.hud-boot-content {
-  color: #00ffff; /* Cyan font for a futuristic look */
-  font-size: 1.5rem;
-  background-color: rgba(0, 255, 255, 0.1); /* Slightly transparent background */
-  border: 2px solid rgba(0, 255, 255, 0.6); /* Highlighted border */
-  padding: 20px;
-  border-radius: 15px; /* Rounded corners for modern design */
-  text-align: center;
-  white-space: pre-line; /* Preserves line breaks */
-  animation: fade-in 1s; /* Fades in smoothly */
-}
-
-/* KEYFRAMES FOR ANIMATIONS */
-@keyframes fade-in {
-  from {
-    opacity: 0; /* Starts invisible */
-  }
-  to {
-    opacity: 1; /* Fades into view */
-  }
-}
-
-/* STYLING NAVIGATION (HUD MENU) */
-.hud-nav {
-  position: absolute;
-  top: 50%; /* Centers vertically */
-  left: 10%; /* Positions slightly to the right */
-  transform: translate(0, -50%);
-  z-index: 10;
+  z-index: 2;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hud-box {
-  background-color: rgba(0, 255, 255, 0.2); /* Transparent background for HUD-like effect */
-  border: 2px solid rgba(0, 255, 255, 0.6); /* Bright border for a glowing look */
+.cockpit img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.1s ease-out;
+}
+
+/* Layout for Main Page */
+.main-layout {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  padding: 20px;
+}
+
+/* Up to this point, everything should be the same with all the css
+
+/* Boot-Up Animation */
+.hud-boot-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+.hud-boot-content {
+  color: #00ffff;
+  font-size: 1.5rem;
+  background-color: rgba(0, 255, 255, 0.1);
+  border: 2px solid rgba(0, 255, 255, 0.6);
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Glowing effect */
+  text-align: center;
+  white-space: pre-line;
+  animation: fade-in 1s;
+}
+
+/* Keyframes for Fade-In Effect */
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+a{
+  color: red;
+}
+
+/* Adjusting Left Menu (HUD Menu) */
+.hud-nav {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 10%; /* Slightly shifted to the right */
+  transform: translate(0, -50%);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.hud-box {
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
 }
 
 .hud-nav ul {
-  list-style: none; /* Removes default bullet points */
+  list-style: none;
   display: flex;
-  flex-direction: column; /* Stacks navigation items */
-  gap: 15px; /* Adds space between items */
+  flex-direction: column;
+  gap: 15px;
 }
 
 .hud-nav ul li {
-  background-color: rgba(0, 255, 255, 0.2); /* Transparent background */
-  border: 1px solid rgba(0, 255, 255, 0.6); /* Consistent glowing border */
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 1px solid rgba(0, 255, 255, 0.6);
   padding: 10px 20px;
+  text-align: center;
   border-radius: 10px;
-  transition: background-color 0.3s ease; /* Smooth hover effect */
+  transition: background-color 0.3s ease;
 }
 
 .hud-nav ul li:hover {
-  background-color: rgba(0, 255, 255, 0.4); /* Highlights on hover */
+  background-color: rgba(0, 255, 255, 0.4);
 }
 
 .hud-nav ul li a {
-  color: white; /* White text for contrast */
-  text-decoration: none; /* Removes underlines */
+  color: white;
+  text-decoration: none;
   font-weight: bold;
-  text-transform: uppercase; /* Modern, bold look */
+  text-transform: uppercase;
+}
+
+.hud-nav ul li a:hover {
+  color: cyan;
+}
+
+/* Center Content Box */
+.main-content .content-box {
+  background-color: rgba(0, 255, 255, 0.2);
+  border: 2px solid rgba(0, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  width: 30%;
+  height: 63%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  color: white;
+  overflow: scroll;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.content-box::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.content-box {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+/* Center Content */
+.main-content {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Adjusting News Column */
+.news-column {
+  flex: 1;
+  padding-left: 20px;
+  position: absolute;
+  top: 50%; /* Center vertically */
+  right: 110px; /* Slightly shifted to the left */
+  transform: translate(0, -50%);
+}
+
+.news-box {
+  color: white;
+  background-color: rgba(0, 255, 255, 0.2); /* Darker background for better contrast */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Consistent border color */
+  border-radius: 15px;
+  width: 500px;
+  height: 640px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.twitter-timeline::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.twitter-timeline {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+.news-box ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+
+/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  /* Hide cockpit on mobile */
+  .cockpit {
+    display: none;
+  }
+
+  /* Stack the columns vertically */
+  .main-layout {
+    flex-direction: column;  /* Change layout to column for mobile */
+    align-items: center;     /* Center align the columns */
+  }
+
+  /* Adjust the left menu (HUD Menu) */
+  .hud-nav {
+    position: relative;      /* Reset positioning to allow stacking */
+    width: 100%;             /* Take up full width on mobile */
+    top: 0;                  /* Reset vertical positioning */
+    left: 0;                 /* Reset horizontal positioning */
+    transform: none;         /* Remove transformations */
+    margin-bottom: 20px;     /* Add space between menu and content */
+  }
+
+  /* Adjust the main content box */
+  .main-content .content-box {
+    width: 90%;  /* Make the content box take up more space on mobile */
+    margin-bottom: 20px; /* Add space between content and news */
+  }
+
+  /* Adjust the news column */
+  .news-column {
+    position: relative;      /* Reset position */
+    width: 90%;              /* Make news column take up more space */
+    margin-top: 20px;        /* Add some space above the news box */
+  }
+
+  /* Adjust news box */
+  .news-box {
+    width: 100%;  /* Make news box take up full width */
+    height: auto; /* Let the height adjust based on content */
+  }
+}
+
+.content-logo {
+  width: 200px; /* Adjust width as needed */
+  height: auto;
+  margin-bottom: 20px; /* Space below the logo */
+  animation: fade-in 1.5s ease-in-out;
 }
 
 /* RESPONSIVE DESIGN */
