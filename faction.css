@@ -151,7 +151,7 @@
   padding-left: 20px;
   position: absolute;
   top: 50%; /* Center vertically */
-  right: 80px; /* Slightly shifted to the left */
+  right: 80px;
   transform: translate(0, -50%);
 }
 
